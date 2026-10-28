@@ -1,0 +1,328 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>AVR Bricks | लाल मिट्टी की ईंटें - Red Clay Bricks</title>
+<meta name="description" content="AVR Bricks (Balaji Eint Udyog) - First, second and third class red clay bricks. Order on WhatsApp 7300774411.">
+<meta property="og:title" content="AVR Bricks - Red Clay Bricks">
+<meta property="og:description" content="अव्वल, दोयम और तीसरे दर्जे की लाल ईंटें। WhatsApp पर ऑर्डर करें।">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect x=%222%22 y=%229%22 width=%2228%22 height=%2214%22 rx=%222%22 fill=%22%23A3341C%22/%3E%3C/svg%3E">
+</head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mukta:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: soot-dark hero over a CSS running-bond brick wall, then a single column of plain bands: products as a price-list, a brick calculator, delivery, contact. Fixed WhatsApp bar on phones. */
+:root{
+  --bg:#EEE9E4; --surface:#F8F5F2; --ink:#221916; --muted:#6B5C55; --line:#D8CEC6;
+  --brick:#A3341C; --brick-2:#8A2A15; --mortar:#C9B8AA; --soot:#1D1614; --on-soot:#F3E9E2;
+  --wa:#1F8A4C; --on-accent:#FFF7F2;
+  --display:"Rozha One","Noto Serif Devanagari",Georgia,serif;
+  --body:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161110; --surface:#201917; --ink:#EFE5DE; --muted:#AE9D94; --line:#3A2E2A;
+  --brick:#D4583A; --brick-2:#B8442A; --mortar:#4A3B35; --soot:#0E0A09; --on-soot:#F3E9E2;
+  --wa:#2FA864; --on-accent:#1A0E0A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161110; --surface:#201917; --ink:#EFE5DE; --muted:#AE9D94; --line:#3A2E2A;
+  --brick:#D4583A; --brick-2:#B8442A; --mortar:#4A3B35; --soot:#0E0A09; --on-soot:#F3E9E2;
+  --wa:#2FA864; --on-accent:#1A0E0A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-bottom:84px}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,5vw,40px)}
+p{margin:0}
+.label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px}
+
+/* top bar */
+.top{background:var(--soot);color:var(--on-soot)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.mark{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em;font-size:15px}
+.mark i{width:22px;height:14px;background:var(--brick);border-radius:2px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
+.lang{display:flex;border:1px solid rgba(243,233,226,.35);border-radius:999px;overflow:hidden}
+.lang button{all:unset;cursor:pointer;padding:6px 14px;font-size:14px;font-weight:700;color:var(--on-soot)}
+.lang button[aria-pressed="true"]{background:var(--on-soot);color:var(--soot)}
+
+/* hero: brick wall */
+.hero{position:relative;color:var(--on-soot);background-color:#6E2414;
+  background-image:
+    linear-gradient(180deg,rgba(20,12,10,.55),rgba(20,12,10,.88)),
+    linear-gradient(0deg,#3B1A12 3px,transparent 3px),
+    linear-gradient(90deg,#3B1A12 3px,transparent 3px),
+    linear-gradient(90deg,#3B1A12 3px,transparent 3px);
+  background-size:100% 100%,100% 36px,96px 72px,96px 72px;
+  background-position:0 0,0 0,0 0,48px 36px}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 80% 110%,rgba(255,120,40,.35),transparent 60%)}
+.hero .wrap{position:relative;z-index:1;padding-block:56px 48px;display:grid;gap:18px}
+.hero .label{color:#F2A27F}
+.hero h1{font-size:clamp(44px,10vw,88px);color:#FFF1E8}
+.hero .sub{font-family:var(--display);font-size:clamp(20px,3.4vw,28px);color:#F2C6B0}
+.hero p.lead{max-width:56ch;font-size:18px;color:#EADBD2}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;padding:13px 20px;border-radius:10px;border:0;cursor:pointer;font-family:var(--body)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-ghost{background:transparent;color:#FFF1E8;border:1.5px solid rgba(255,241,232,.5)}
+.btn svg{width:20px;height:20px;flex:none}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:10px;font-size:15px;color:#E5CFC3}
+.facts b{color:#fff}
+
+/* sections */
+section.band{padding-block:56px}
+.head{display:grid;gap:8px;margin-bottom:28px;max-width:62ch}
+.head p{color:var(--muted)}
+
+/* products: price list */
+.list{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}
+.row h3{font-size:24px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.row h3 small{font-family:var(--body);font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.row p{grid-column:1;color:var(--muted);max-width:60ch}
+.row .use{grid-column:1;font-size:14px;color:var(--ink)}
+.row .use b{color:var(--brick)}
+.row .act{grid-column:2;grid-row:1/span 3;display:grid;gap:6px;justify-items:end;text-align:right}
+.rate{font-size:14px;color:var(--muted)}
+.mini{font-size:15px;padding:9px 14px;background:var(--brick);color:var(--on-accent)}
+.spec{margin-top:18px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+.spec span{font-variant-numeric:tabular-nums}
+
+/* calculator */
+.calc-band{background:var(--surface);border-block:1px solid var(--line)}
+.calc{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+.fields{display:grid;gap:16px}
+.field{display:grid;gap:6px}
+.field label{font-weight:700;font-size:15px}
+.field input,.field select{font:inherit;font-size:18px;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.result{background:var(--soot);color:var(--on-soot);border-radius:12px;padding:24px;display:grid;gap:14px}
+.big{font-family:var(--display);font-size:clamp(44px,8vw,64px);line-height:1;font-variant-numeric:tabular-nums;color:#FFD9C6}
+.result .note{font-size:14px;color:#C9B6AB}
+.result dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:15px}
+.result dt{color:#C9B6AB}.result dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+
+/* delivery + why */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pt{display:grid;gap:8px;padding-top:16px;border-top:3px solid var(--brick)}
+.pt h3{font-size:22px}
+.pt p{color:var(--muted);font-size:16px}
+
+/* contact */
+.contact{background:var(--soot);color:var(--on-soot)}
+.contact .wrap{padding-block:52px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.contact h2{color:#FFF1E8}
+.contact p{color:#D9C6BB}
+.num{font-family:var(--display);font-size:clamp(34px,7vw,52px);color:#FFD9C6;letter-spacing:.02em;user-select:all;font-variant-numeric:tabular-nums}
+.copy{all:unset;cursor:pointer;font-size:14px;font-weight:700;padding:6px 12px;border:1px solid rgba(243,233,226,.4);border-radius:999px}
+.placeholder{display:inline-block;border:1px dashed rgba(243,233,226,.5);padding:2px 8px;border-radius:6px;font-size:15px}
+footer{padding-block:20px;font-size:13px;color:var(--muted);text-align:center}
+
+/* phone WhatsApp bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--wa);
+  padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.bar a{display:flex;justify-content:center;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:17px}
+.bar svg{width:22px;height:22px}
+@media (min-width:760px){.bar{display:none}body{padding-bottom:0}}
+
+@media (max-width:760px){
+  .calc,.contact .wrap{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr;gap:22px}
+  .row{grid-template-columns:1fr}
+  .row .act{grid-column:1;grid-row:auto;justify-items:start;text-align:left;grid-auto-flow:column;align-items:center;justify-content:space-between}
+}
+@media (prefers-reduced-motion:no-preference){.btn,.mini{transition:transform .15s}.btn:hover,.mini:hover{transform:translateY(-1px)}}
+</style>
+
+<div class="top"><div class="wrap">
+  <div class="mark"><i></i><span>AVR BRICKS</span></div>
+  <div class="lang" role="group" aria-label="Language">
+    <button id="lang-hi" type="button" aria-pressed="true" data-lang="hi">हिंदी</button>
+    <button id="lang-en" type="button" aria-pressed="false" data-lang="en">English</button>
+  </div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="label" data-hi="भट्टे से सीधा आपकी साइट तक" data-en="Straight from the kiln to your site"></span>
+  <h1 data-hi="AVR ब्रिक्स" data-en="AVR Bricks"></h1>
+  <div class="sub" data-hi="लाल मिट्टी की पक्की ईंटें" data-en="Red Clay Bricks"></div>
+  <p class="lead" data-hi="घर, दुकान, चारदीवारी या नींव — हर काम के लिए अच्छी तरह पकी लाल ईंटें। हज़ार के हिसाब से रेट, ट्रॉली से डिलीवरी। ऑर्डर के लिए बस WhatsApp करें।" data-en="Well-fired red clay bricks for houses, shops, boundary walls and foundations. Priced per thousand, delivered by tractor trolley. Just WhatsApp us to order."></p>
+  <div class="cta">
+    <a class="btn btn-wa wa-link" data-msg="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span data-hi="WhatsApp पर ऑर्डर करें" data-en="Order on WhatsApp"></span></a>
+    <a class="btn btn-ghost" href="#calc" data-hi="कितनी ईंट लगेगी?" data-en="How many bricks?"></a>
+  </div>
+  <div class="facts">
+    <span><b data-hi="रेट" data-en="Rate"></b> <span data-hi="प्रति 1000 ईंट" data-en="per 1,000 bricks"></span></span>
+    <span><b data-hi="साइज़" data-en="Size"></b> 9″ × 4½″ × 3″</span>
+    <span><b data-hi="डिलीवरी" data-en="Delivery"></b> <span data-hi="ट्रैक्टर-ट्रॉली" data-en="Tractor trolley"></span></span>
+  </div>
+</div></header>
+
+<main>
+<section class="band" id="products"><div class="wrap">
+  <div class="head">
+    <span class="label" data-hi="हमारी ईंटें" data-en="Our bricks"></span>
+    <h2 data-hi="जैसा काम, वैसी ईंट" data-en="The right brick for the job"></h2>
+    <p data-hi="ताज़ा रेट रोज़ बदलते हैं, इसलिए भाव WhatsApp पर पूछें। एक ट्रॉली से कम भी मिलता है।" data-en="Rates change with the season, so ask for today's price on WhatsApp. Orders smaller than one trolley are welcome too."></p>
+  </div>
+  <div class="list">
+    <div class="row">
+      <h3><span data-hi="अव्वल (पहला दर्जा)" data-en="Awwal (First Class)"></span><small>FIRST CLASS</small></h3>
+      <p data-hi="पूरी पकी, गहरी लाल, एक जैसा साइज़। दो ईंट टकराओ तो खनक की आवाज़ आती है।" data-en="Fully fired, deep red, uniform size. Knock two together and they ring."></p>
+      <div class="use"><b data-hi="किसके लिए:" data-en="Best for:"></b> <span data-hi="घर की दीवारें, बाहर दिखने वाला काम" data-en="House walls, exposed brickwork"></span></div>
+      <div class="act"><span class="rate" data-hi="₹ ___ / 1000" data-en="₹ ___ / 1000"></span><a class="btn mini wa-link" data-msg="awwal" href="#" target="_blank" rel="noopener" data-hi="भाव पूछें" data-en="Ask rate"></a></div>
+    </div>
+    <div class="row">
+      <h3><span data-hi="दोयम (दूसरा दर्जा)" data-en="Doyam (Second Class)"></span><small>SECOND CLASS</small></h3>
+      <p data-hi="मज़बूत और पकी हुई, बस किनारे या रंग में थोड़ा फ़र्क। अव्वल से सस्ती।" data-en="Strong and well fired, with small edge or colour variation. Cheaper than Awwal."></p>
+      <div class="use"><b data-hi="किसके लिए:" data-en="Best for:"></b> <span data-hi="चारदीवारी, प्लास्टर वाली दीवार, अंदर का काम" data-en="Boundary walls, plastered walls, inner work"></span></div>
+      <div class="act"><span class="rate">₹ ___ / 1000</span><a class="btn mini wa-link" data-msg="doyam" href="#" target="_blank" rel="noopener" data-hi="भाव पूछें" data-en="Ask rate"></a></div>
+    </div>
+    <div class="row">
+      <h3><span data-hi="तीसरा दर्जा / अद्धा" data-en="Third Class / Adhha"></span><small>THIRD CLASS</small></h3>
+      <p data-hi="टूटी या आधी ईंट और कम पकी ईंट। सबसे सस्ती।" data-en="Broken, half and lightly fired bricks. The cheapest option."></p>
+      <div class="use"><b data-hi="किसके लिए:" data-en="Best for:"></b> <span data-hi="भराई, नींव की रोड़ी, अस्थायी काम" data-en="Filling, foundation rubble, temporary work"></span></div>
+      <div class="act"><span class="rate">₹ ___ / 1000</span><a class="btn mini wa-link" data-msg="third" href="#" target="_blank" rel="noopener" data-hi="भाव पूछें" data-en="Ask rate"></a></div>
+    </div>
+  </div>
+  <div class="spec">
+    <span data-hi="मानक साइज़: 9″ × 4½″ × 3″ (230 × 110 × 70 mm)" data-en="Standard size: 9″ × 4½″ × 3″ (230 × 110 × 70 mm)"></span>
+    <span data-hi="कच्चा माल: लाल चिकनी मिट्टी" data-en="Material: red clay"></span>
+  </div>
+</div></section>
+
+<section class="band calc-band" id="calc"><div class="wrap">
+  <div class="head">
+    <span class="label" data-hi="ईंट कैलकुलेटर" data-en="Brick calculator"></span>
+    <h2 data-hi="दीवार बताइए, ईंट हम गिन देंगे" data-en="Tell us the wall, we'll count the bricks"></h2>
+    <p data-hi="फ़ुट में नाप डालें। मसाले की जगह और 5% टूट-फूट जोड़कर अंदाज़ा दिखता है।" data-en="Enter measurements in feet. The estimate includes mortar joints and 5% breakage."></p>
+  </div>
+  <div class="calc">
+    <div class="fields">
+      <div class="two">
+        <div class="field"><label for="len" data-hi="लंबाई (फ़ुट)" data-en="Length (ft)"></label><input id="len" type="number" inputmode="decimal" min="0" value="40"></div>
+        <div class="field"><label for="ht" data-hi="ऊँचाई (फ़ुट)" data-en="Height (ft)"></label><input id="ht" type="number" inputmode="decimal" min="0" value="6"></div>
+      </div>
+      <div class="field"><label for="thk" data-hi="दीवार की मोटाई" data-en="Wall thickness"></label>
+        <select id="thk">
+          <option value="0.75" data-hi="9 इंच (पूरी ईंट) — बाहरी दीवार" data-en="9 inch (full brick) — outer wall"></option>
+          <option value="0.375" data-hi="4½ इंच (आधी ईंट) — अंदर की दीवार" data-en="4½ inch (half brick) — partition wall"></option>
+        </select>
+      </div>
+      <div class="field"><label for="type" data-hi="ईंट का दर्जा" data-en="Brick class"></label>
+        <select id="type">
+          <option value="awwal" data-hi="अव्वल" data-en="Awwal (First)"></option>
+          <option value="doyam" data-hi="दोयम" data-en="Doyam (Second)"></option>
+          <option value="third" data-hi="तीसरा दर्जा" data-en="Third class"></option>
+        </select>
+      </div>
+    </div>
+    <div class="result" aria-live="polite">
+      <span class="note" data-hi="लगभग ईंटें चाहिए" data-en="Bricks needed, approx."></span>
+      <div class="big" id="out">0</div>
+      <dl>
+        <dt data-hi="दीवार का आयतन" data-en="Wall volume"></dt><dd id="vol">0</dd>
+        <dt data-hi="ट्रॉली (लगभग 3000 ईंट/ट्रॉली)" data-en="Trolleys (~3,000 bricks each)"></dt><dd id="trl">0</dd>
+      </dl>
+      <a class="btn btn-wa wa-link" data-msg="calc" href="#" target="_blank" rel="noopener"><span data-hi="इस हिसाब से WhatsApp करें" data-en="Send this on WhatsApp"></span></a>
+      <span class="note" data-hi="यह सिर्फ़ अंदाज़ा है। दरवाज़े-खिड़की की जगह घटा लें।" data-en="This is only an estimate. Subtract door and window openings."></span>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head">
+    <span class="label" data-hi="क्यों AVR ब्रिक्स" data-en="Why AVR Bricks"></span>
+    <h2 data-hi="भट्टे का भाव, घर तक डिलीवरी" data-en="Kiln price, doorstep delivery"></h2>
+  </div>
+  <div class="grid3">
+    <div class="pt"><h3 data-hi="सीधे भट्टे से" data-en="Direct from the kiln"></h3><p data-hi="बीच में कोई दलाल नहीं, इसलिए सही भाव।" data-en="No middlemen in between, so you pay a fair price."></p></div>
+    <div class="pt"><h3 data-hi="पूरी गिनती" data-en="Full count"></h3><p data-hi="जितनी ईंट बोली, उतनी ट्रॉली में। उतारते वक़्त गिन लीजिए।" data-en="What you order is what's on the trolley. Count it while unloading."></p></div>
+    <div class="pt"><h3 data-hi="ट्रॉली डिलीवरी" data-en="Trolley delivery"></h3><p data-hi="आपकी साइट तक ट्रैक्टर-ट्रॉली से। दूरी के हिसाब से भाड़ा।" data-en="By tractor trolley to your site. Freight depends on distance."></p></div>
+  </div>
+</div></section>
+</main>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div style="display:grid;gap:12px;min-width:0">
+    <span class="label" style="color:#F2A27F" data-hi="संपर्क" data-en="Contact"></span>
+    <h2 data-hi="आज का भाव पूछिए" data-en="Ask for today's rate"></h2>
+    <p data-hi="कितनी ईंट, कौन सा दर्जा और साइट का पता भेज दीजिए, हम भाड़े समेत पूरा भाव बता देंगे।" data-en="Send the quantity, brick class and site location. We'll reply with the full price including freight."></p>
+    <p><b style="color:#FFF1E8" data-hi="भट्टे का पता:" data-en="Kiln location:"></b> <span data-hi="अलीगढ़, उत्तर प्रदेश" data-en="Aligarh, Uttar Pradesh"></span></p>
+    <p><a class="btn btn-ghost" href="https://maps.app.goo.gl/x2GLbENWgKJicMgM6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg><span data-hi="Google Maps पर रास्ता देखें" data-en="Get directions on Google Maps"></span></a></p>
+  </div>
+  <div style="display:grid;gap:12px;min-width:0">
+    <div class="num">73007 74411</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <a class="btn btn-wa wa-link" data-msg="general" href="#" target="_blank" rel="noopener" data-hi="WhatsApp खोलें" data-en="Open WhatsApp"></a>
+      <button class="copy" id="copy" type="button" data-hi="नंबर कॉपी करें" data-en="Copy number"></button>
+    </div>
+  </div>
+</div></section>
+<footer data-hi="© 2026 AVR ब्रिक्स · लाल मिट्टी की ईंटें" data-en="© 2026 AVR Bricks · Red Clay Bricks"></footer>
+
+<div class="bar"><a class="wa-link" data-msg="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span data-hi="WhatsApp पर ऑर्डर — 7300774411" data-en="Order on WhatsApp — 7300774411"></span></a></div>
+
+<script>
+(function(){
+  var PHONE = "917300774411";
+  var lang = "hi";
+  try { lang = localStorage.getItem("balaji-lang") || "hi"; } catch(e){}
+  var names = {
+    awwal:{hi:"अव्वल (पहला दर्जा)",en:"Awwal (First Class)"},
+    doyam:{hi:"दोयम (दूसरा दर्जा)",en:"Doyam (Second Class)"},
+    third:{hi:"तीसरा दर्जा",en:"Third Class"}
+  };
+  var BRICKS_PER_CFT = 13.5, WASTE = 1.05, PER_TROLLEY = 3000;
+  var last = {bricks:0, trolleys:0};
+  var fmt = function(n){ return Math.round(n).toLocaleString("en-IN"); };
+
+  function msg(kind){
+    var hi = lang === "hi";
+    if (kind === "general") return hi ? "नमस्ते AVR ब्रिक्स, मुझे ईंटों का आज का भाव जानना है।" : "Hello AVR Bricks, I'd like today's brick rate.";
+    if (kind === "calc") {
+      var t = document.getElementById("type").value;
+      return hi
+        ? "नमस्ते, मुझे लगभग " + fmt(last.bricks) + " ईंट (" + names[t].hi + ") चाहिए। भाड़े समेत भाव बताइए। साइट का पता: "
+        : "Hello, I need about " + fmt(last.bricks) + " bricks (" + names[t].en + "). Please share the price including freight. Site location: ";
+    }
+    return hi ? "नमस्ते, " + names[kind].hi + " ईंट का आज का भाव (प्रति 1000) क्या है?" : "Hello, what is today's rate for " + names[kind].en + " bricks (per 1,000)?";
+  }
+  function links(){
+    document.querySelectorAll(".wa-link").forEach(function(a){
+      a.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg(a.dataset.msg));
+    });
+  }
+  function apply(l){
+    lang = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll("[data-" + l + "]").forEach(function(el){ el.textContent = el.getAttribute("data-" + l); });
+    document.querySelectorAll(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    try { localStorage.setItem("balaji-lang", l); } catch(e){}
+    calc();
+  }
+  function calc(){
+    var L = parseFloat(document.getElementById("len").value) || 0;
+    var H = parseFloat(document.getElementById("ht").value) || 0;
+    var T = parseFloat(document.getElementById("thk").value) || 0;
+    var vol = L * H * T;
+    last.bricks = Math.ceil(vol * BRICKS_PER_CFT * WASTE);
+    last.trolleys = last.bricks ? Math.ceil(last.bricks / PER_TROLLEY * 2) / 2 : 0;
+    document.getElementById("out").textContent = fmt(last.bricks);
+    document.getElementById("vol").textContent = vol.toFixed(1) + (lang === "hi" ? " घन फ़ुट" : " cu ft");
+    document.getElementById("trl").textContent = last.trolleys;
+    links();
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click", function(){ apply(b.dataset.lang); }); });
+  ["len","ht","thk","type"].forEach(function(id){ document.getElementById(id).addEventListener("input", calc); });
+  document.getElementById("copy").addEventListener("click", function(){
+    var btn = this, done = function(){ btn.textContent = lang === "hi" ? "कॉपी हो गया" : "Copied"; };
+    try {
+      navigator.clipboard.writeText("7300774411").then(done, function(){ sel(); });
+    } catch(e){ sel(); }
+    function sel(){ var r = document.createRange(); r.selectNodeContents(document.querySelector(".num")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  });
+  apply(lang === "en" ? "en" : "hi");
+})();
+</script>
+
+</body></html>
